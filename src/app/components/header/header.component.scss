@@ -1,0 +1,30 @@
+header{
+    display: flex;
+    padding-inline: 16px;
+    padding-block: 8px;
+    background-color: #333;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn-container{
+    display: inline;
+    background-color: rgb(25, 25, 66);
+    color: white;
+}
+li{
+    cursor: pointer;
+    &:hover{
+        color:pink;
+        scale: 1.08;
+        transition: ease-in;
+    }
+}
+span{
+    cursor: pointer;
+    &:hover{
+        color:green;
+        scale: 1.08;
+        transition: ease-in-out;
+    }
+}
