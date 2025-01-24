@@ -1,2 +1,5 @@
-<p>todos works!</p>
 <app-todo-item/>
+@for (todo of todoItems(); track $index) {
+<p>{{ todo.title }}</p>
+
+}
