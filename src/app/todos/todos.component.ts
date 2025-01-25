@@ -26,4 +26,18 @@ export class TodosComponent implements OnInit {
         this.todoItems.set(todos); // Update the signal with fetched todos
       });
   }
+
+  updateTodoItem(todoItem: todo) {
+    this.todoItems.update((todos) => {
+      return todos.map((todo) => {
+        if (todo.id === todoItem.id) {
+          return {
+            ...todo,
+            completed: !todo.completed,
+          };
+        }
+        return todo;
+      });
+    });
+  }
 }
